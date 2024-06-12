@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Projeto Firestore</h1>
+    <h2>Criar usuario</h2>
+    <form action="/create" method="POST">
+        <input type="text" name="nome" id="nome" placeholder="nome">
+        <input type="email" name="email" id="email" placeholder="email">
+        <input type="text" name="cpf" id="cpf" placeholder="cpf">
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br>
+    <br>
+
+    <h1>Buscar por CPF</h1>
+    <form action="/buscar" method="POST">
+        <input type="text" name="cpf" placeholder="Digite um CPF">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <br>
+    <br>
+
+    <h1>Buscar por id</h1>
+    <form action="/buscar_id" method="POST">
+        <input type="text" name="id" placeholder="Digite um id">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <br>
+    <br>
+    
+    <h1>Deletar por id</h1>
+    <form action="/delete" method="POST">
+        <input type="text" name="id" placeholder="Digite um id">
+        <button type="submit">Deletar</button>
+    </form>
+
+    <h1>Atualizar nome</h1>
+    <form action="/update" method="POST">
+        <input type="text" name="oldName" placeholder="Digite o nome original">
+        <input type="text" name="newName" placeholder="Digite um o novo nome">
+        <button type="submit">Atualizar</button>
+    </form>
+    <br>
+    <br>
+
+
+    <button type="button" onclick="listar()">Listar Usuarios</button>
+
+    <script>
+        function listar() {
+            window.location = window.location.href = "/list"
+        }
+    </script>
+</body>
+</html>
